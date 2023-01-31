@@ -2,21 +2,55 @@
 
 .component{
 
-    background-image: url("https://static.vecteezy.com/system/resources/previews/011/641/982/original/abstract-neon-wave-liqid-background-free-vector.jpg");
-width: 100%;
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/011/641/982/original/abstract-neon-wave-liqid-background-free-vector.jpg"); */
+/* width: 100%;
+background-image: url(../public/bg.png); */
 /* background-color: rgb(219, 219, 219); */
-background-size: cover;
-height: 100vh;
+/* background-size: cover; */
+/* height: 100vh; */
 position: relative;
 display: flex;
 justify-content: flex-start;
 align-items: center;
 flex-direction: column;
 }
+.openBtn {
+    color: black;
+    background-color: white ;
+    border: 5px solid transparent;
+    transition: .2s ease;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 16px; 
+    font-family: Unbounded;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+  }
+  .select
+  {
+    font-family: Unbounded;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+  }
+  .openBtn:hover {
+    color: black ;
+    cursor: pointer;
+    background-color: white;
+    transform: scale(1.1);
+    border: 5px solid white ;
+  }
+
 .wallets{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 10px;
@@ -29,7 +63,10 @@ flex-direction: column;
     color: white;
     border-radius: 10px 10px 10px 10px;
     /* background-color: white; */
-    background-color: rgba(0, 0, 0);
+    /* background-color: rgba(255, 255, 255, 0.514);
+     */
+     background: rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(20px);
  
 text-align: center;
     padding: 12px ;
@@ -112,7 +149,8 @@ border-radius: 20px;
     justify-content: center;
     align-items: center;
     flex-direction: column !important;
-    background-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -124,14 +162,15 @@ border-radius: 20px;
     font-size: 15px;
     letter-spacing: 1px;
     line-height:25px;
-    background-color: rgba(0, 0, 0);
+    /* background-color: rgba(0, 0, 0); */
  
 }
 .websiteBox{
     margin-top: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-        background-color: rgba(0, 0, 0);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
  
 
 
@@ -140,7 +179,8 @@ border-radius: 20px;
     margin-top: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-        background-color: rgba(0, 0, 0);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
  
 
 
@@ -150,13 +190,17 @@ border-radius: 20px;
     margin-top: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
-        background-color: rgba(0, 0, 0);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
  
 
 
 
 }
-
+.modal{
+    height: 100%;
+    padding: 100px !important;
+}
 .dateLine{
     border-bottom: 1px solid black;
     color: white;
@@ -214,7 +258,21 @@ border-radius: 20px;
   
   }
 @media screen and (max-width:1200px) {
-    
+    .openBtn {
+        color: black;
+        background-color: white ;
+        border: 5px solid transparent;
+        transition: .2s ease;
+        border-radius: 10px;
+        width: 50%;
+        font-size: 16px; 
+        font-family: Unbounded;
+        font-weight: bold;
+        padding: 5px 0;
+        text-align: center;
+        position: relative;
+        bottom: 10px;
+      }
 .component{
 
     background-image: url("https://static.vecteezy.com/system/resources/previews/011/641/982/original/abstract-neon-wave-liqid-background-free-vector.jpg");
@@ -369,3 +427,84 @@ height: 100%;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    height: max-content;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.confirm {
+
+    /* position: absolute; */
+   
+  }
+  .cancel{
+    margin-top: 50px;
+    color: white;
+    background-color: black ;
+    border: 5px solid transparent;
+    transition: .2s ease;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px; 
+    font-family: Unbounded;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+  }
+  .cancel:hover {
+    color: black ;
+    background-color: white;
+    transform: scale(1.1);
+    border: 5px solid black ;
+  }
+  .confirmShow {
+    /* top: calc(50% - 140px); */
+  }
+  
+  .confirmContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    padding: 1.5rem;
+  }
+
+
+  
+
+  
+  @media screen and (max-width: 450px) {
+    .confirm {
+
+    }
+  }

@@ -12,8 +12,19 @@ import {
   } from 'wagmi'
   import Web3 from "web3";
 import { abi } from './abi';
+import { Modal } from './Modal';
+
   const web3 = new Web3(Web3.givenProvider);
 export default function Details() {
+  const [open, setOpen] = useState(false);
+  
+  const handleConfirm = result => {
+    if (result) {
+      console.log('some action...')
+    }
+    
+    setOpen(false)
+  }
     const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect()
     const [wallet,setWallet]=useState()
@@ -31,14 +42,15 @@ export default function Details() {
     // }
    const mintNow=async(contractAddress)=>{
     const contract = new web3.eth.Contract(abi, contractAddress);
-    // const response = await contract.methods
-    // .mint(address,1,1,"")
+    console.log(address)
+    const response = await contract.methods
+    .mint("0xdd41532DF4DBa94eD835DD9c57fAB5BA97b15E98",1,1,"0x12")
     // .send(address);
     // const tokenId = response.events.Transfer.returnValues.tokenId;
     // alert(
-    //   `NFT successfully minted. Contract address - ${contractAddress} and Token ID - ${tokenId}`
+    //   `NFT successfully minted. Contract address - ${contractAddress} and Token ID `
     // );
-   console.log(contract)
+   console.log(response)
 
    }
   return (
@@ -52,8 +64,18 @@ export default function Details() {
         
         </div>
 
-        <div className={styles.wallets}>
-      {connectors.map((connector) => (
+ 
+     {open && <div className={styles.modal}>
+                 <div className={open ? styles.confirmShow: styles.confirm}>
+                 {!isConnected ? 
+                 
+                 <div>
+                  <div className={styles.select}>
+                    SELECT WALLET
+                  </div>
+                 <div className={styles.wallets}>
+
+{connectors.map((connector) => (
         <div>
 
         <button
@@ -71,8 +93,31 @@ export default function Details() {
         </div>
 
       ))}
+
+</div>
+
+                 </div>
+                 
+                 :
+    <div className={styles.mint}>
+      <button onClick={()=>mintNow(event.contract)} 
+             className={styles.walletbtn} 
+             >
+MINT
+      </button>
+      </div>
+    }
+
+<button className={styles.cancel} onClick={() => handleConfirm(false)}>Cancel</button>
+
  
-    </div>
+      </div>
+      <div 
+        className={styles.overlay} 
+        onClick={() => handleConfirm(false)} 
+      />
+  
+        </div>}
 
 
     <div>
@@ -124,16 +169,10 @@ src={event.image}/>
 </motion.div>
          </div>
          <div className={styles.detailCardBox} >
-         {!isConnected ? <div></div>:
-    <div className={styles.mint}>
-      <button onClick={()=>mintNow(event.contract)} 
-             className={styles.walletbtn} 
-             >
-MINT
-      </button>
-      </div>
-    }
 
+       <button className={styles.openBtn} onClick={() => setOpen(true)}>
+        MINT
+      </button>
          <motion.div className={styles.descriptionBox}
           initial="hidden" animate="visible" variants={{
             hidden: {
@@ -251,7 +290,7 @@ className={styles.boxRow}>
 
         </div>
   
-
+ 
         
     </div>
   )

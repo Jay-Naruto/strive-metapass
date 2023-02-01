@@ -249,7 +249,7 @@ export default function Details() {
                 <div>
 
                   <a target="_blank" href={event.website}>
-                    <img className={styles.svgs} src='/icons8-internet-30.png' alt='' />
+                    <img className={styles.svgs} src='/icons8-internet-30-w.png' alt='' />
                   </a>
 
                 </div>
@@ -299,7 +299,7 @@ export default function Details() {
 
                 <div>
                   <a target="_blank" href={event.redirect}>
-                    <img className={styles.svgs} src='/icons8-youtube.svg' alt='' />
+                    <img className={styles.svgs} src='/icons8-youtube-w.svg' alt='' />
                   </a>
 
                 </div>

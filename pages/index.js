@@ -27,7 +27,7 @@ export default function Home() {
       description: "In this Session, Preetam Rao will share about his Web3 Journey, QuillAudits & more.",
       website: "https://ur-hackathon-2.devfolio.co/",
       redirect: "https://www.youtube.com/live/g-NFNuIjEF8?feature=share",
-      contract: ""
+      contract: "0x0cCdC947E4dc82028467eF089537855536F31Db0"
 
     },
     {
@@ -47,7 +47,8 @@ export default function Home() {
       date: "13 Feb at 5pm.",
       description: "In this Session, Daniel Eugene will share about his Web3 Journey, HashLips & more.",
       website: "https://ur-hackathon-2.devfolio.co/",
-      redirect: "https://youtube.com/live/KSk7AiF5nY0?feature=share"
+      redirect: "https://youtube.com/live/KSk7AiF5nY0?feature=share",
+      contract: "0x9c4203c4c26feFd9D797A6E30ABDB3Df0Ac425dC"
     },
     {
       image: "/buidl.jpeg",

@@ -10,8 +10,8 @@ import {
   useEnsAvatar,
   useEnsName,
 } from 'wagmi'
+import abi from "./abi.json"
 import Web3 from "web3";
-import { abi } from './abi';
 import { Modal } from './Modal';
 
 const web3 = new Web3(Web3.givenProvider);

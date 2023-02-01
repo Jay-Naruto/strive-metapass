@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import styles from '../styles/details.module.css'
 import Link from 'next/link'
@@ -44,13 +44,18 @@ export default function Details() {
     const contract = new web3.eth.Contract(abi, contractAddress);
     const response = await contract.methods
       .mint(address, 1, 1, "0x12")
-      .send({ from: address });
+      .send({ from: address })
     //const tokenId = response.events.Transfer.returnValues.tokenId;
     alert(
       // `NFT successfully minted. Contract address - ${contractAddress} and Token ID - ${tokenId}`
       `NFT successfully minted. Contract address - ${contractAddress}`
     );
+    if (response)
+    {
+      Router.push("/")
+    }
     console.log(response)
+
 
   }
   return (
@@ -99,7 +104,9 @@ export default function Details() {
             </div>
 
             :
-            <div className={styles.mint}>
+            <div 
+            
+            className={styles.mint}>
               <button onClick={() => mintNow(event.contract)}
                 className={styles.walletbtn}
               >
@@ -170,9 +177,24 @@ export default function Details() {
           </div>
           <div className={styles.detailCardBox} >
 
-            <button className={styles.openBtn} onClick={() => setOpen(true)}>
+            <motion.button
+                initial="hidden" animate="visible" variants={{
+                  hidden: {
+                    scale: .8,
+                    opacity: 0
+                  },
+                  visible: {
+                    scale: 1,
+                    opacity: 1,
+                    transition: {
+                      delay: .3
+                    }
+                  },
+                }}
+            
+            className={styles.openBtn} onClick={() => setOpen(true)}>
               MINT
-            </button>
+            </motion.button>
             <motion.div className={styles.descriptionBox}
               initial="hidden" animate="visible" variants={{
                 hidden: {
@@ -227,7 +249,7 @@ export default function Details() {
                 <div>
 
                   <a target="_blank" href={event.website}>
-                    <img className={styles.svgs} src='/icons8-internet-30-w.png' alt='' />
+                    <img className={styles.svgs} src='/icons8-internet-30.png' alt='' />
                   </a>
 
                 </div>
@@ -277,7 +299,7 @@ export default function Details() {
 
                 <div>
                   <a target="_blank" href={event.redirect}>
-                    <img className={styles.svgs} src='/icons8-youtube-w.svg' alt='' />
+                    <img className={styles.svgs} src='/icons8-youtube.svg' alt='' />
                   </a>
 
                 </div>

@@ -357,9 +357,10 @@ width: 20px;height: auto;
 .btn29 {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: #000;
-  background-image: none;
-  color: #fff;
+  /* background-color: #000; */
+  background: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%);
+  /* background-image: none; */
+  color: #fff !important;
   cursor: pointer;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
@@ -417,13 +418,13 @@ width: 20px;height: auto;
 .btn29 .text {
   display: block;
   font-weight: 900;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   position: relative;
 }
 .btn29:hover .text {
   -webkit-animation: move-right-alternate 0.3s ease forwards;
   animation: move-right-alternate 0.3s ease forwards;
-  color: white !important;
+  color: black !important;
 }
 @-webkit-keyframes move-right-alternate {
   0% {

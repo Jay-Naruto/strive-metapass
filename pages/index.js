@@ -186,21 +186,23 @@ export default function Home() {
                     <p>
 
                       <div className={styles.btnBody}>
-                        <Link
+                      
+                          <button className={styles.btn29}>
+                            <span className={styles.textcontainer}>
+                              <span className={styles.text}>
+                              <Link
                           href={{
                             pathname: '/details',
                             query: product
                           }}
+                          as={product.name}
                           className={styles.linktext} style={{ textDecoration: 'none' }}>
-                          <button className={styles.btn29}>
-                            <span className={styles.textcontainer}>
-                              <span className={styles.text}>
-
                                 Get Pass
+                        </Link>
+
                               </span>
                             </span>
                           </button>
-                        </Link>
 
                       </div>
 

@@ -34,7 +34,7 @@ export default function Details() {
   const [wallet, setWallet] = useState()
   const location = useRouter();
   const event = location.query;
-  // console.log(location.query)
+  console.log(event.contract)
   const { address, connector, isConnected } = useAccount()
   const { data: ensAvatar } = useEnsAvatar({ address })
   const { data: ensName } = useEnsName({ address })
@@ -44,7 +44,7 @@ export default function Details() {
   // if (isConnected) {
   //  setWallet(address)
   // }
-  const mintNow = async (contractAddress) => {
+  const mintNow = async (cA) => {
     // export type ExternalProvider = {
     //   isMetaMask?: boolean;
     //   isStatus?: boolean;
@@ -54,10 +54,12 @@ export default function Details() {
     //   send?: (request: { method: string, params?: Array<any> }, callback: (error: any, response: any) => void) => void
     //   request?: (request: { method: string, params?: Array<any> }) => Promise<any>
     // }
+    // 5CQleDz2F.843d06da-8412-46ec-a600-e8b49aeb187f  0xE6Dd0653798652cA4Fcc9F841aAbEFFA8df9134c test
+    // eGZIy07i9.3bdc9c52-f7f3-4564-a5ae-3e89deb6f186  0xe6dd0653798652ca4fcc9f841aabeffa8df9134c  mAIn
     const biconomy = new Biconomy(window.ethereum, {
-      apiKey: "5CQleDz2F.843d06da-8412-46ec-a600-e8b49aeb187f",
+      apiKey: "eGZIy07i9.3bdc9c52-f7f3-4564-a5ae-3e89deb6f186",
       debug: true,
-      contractAddresses: ["0xFb6E9728577898C27135EE9F22D3979c457De1AB"], // list of contract address you want to enable gasless on
+      contractAddresses: ["0xe6dd0653798652ca4fcc9f841aabeffa8df9134c"], // list of contract address you want to enable gasless on
     });
   
   
@@ -70,55 +72,10 @@ export default function Details() {
     console.log(res)
 
     const web3 = new Web3(biconomy.provider);
-    // console.log(web3)
-    // const contract = new web3.eth.Contract(abi, contractAddress);
-    // console.log(web3)
-
-
-
-
-    //     const bic = await biconomy.init();
-    // console.log(bic);
-    // const web3 = new Web3(biconomy);
-    // const contract = new web3.eth.Contract(abi, contractAddress);
-
-    // const web3 = new Web3(biconomy.provider);
-    // const contractInstance = new web3.eth.Contract(
-    //   abi, contractAddress
-    // );
-    
-    // await contractInstance.methods
-    //   .mint(address, 1, 1, "0x12")
-    //   .send("eth_sendTransaction", {
-    //     from: address,
-    //     signatureType: "PERSONAL_SIGN",
-    //   });
-    // // Listen to transaction updates:
-    // biconomy.on("txHashGenerated",  (data= { transactionId, transactionHash }) => {
-    //   console.log(data);
-    //   showSuccessMessage(`tx hash ${data.hash}`);
-    // })
-    
-    // biconomy.on("txMined", (data= {msg, id, hash, receipt}) => {
-    //   console.log(data);
-    // });
-    
-    // biconomy.on("onError", (data= {error, transactionId}) => {
-    //   console.log(data);
-    // });
-    
-    // bicnomy.on("txHashChanged", (data= {transactionId, transactionHash}) => {
-    //   console.log(data);
-    // });
-    
-    // const response = await contract.methods
-    //   .mint(address, 1, 1, "0x12")
-    //   .send({ from: address })
-    //const tokenId = response.events.Transfer.returnValues.tokenId;
-
+  
     let contract = new web3.eth.Contract(
       abi,
-      contractAddress
+      cA
     );
 
 let userAddress = address;
@@ -138,19 +95,7 @@ tx.on("transactionHash", function (hash) {
               console.log(receipt.transactionHash);
               //do something with transaction hash
           }); 
-
-    // let userAddress = "";
-// let privateKey = "";
-
-
-    // alert(
-    //   `NFT successfully minted. Contract address - ${contractAddress}`
-    // );
-    // if (response)
-    // {
-    //   Router.push("/")
-    // }
-    // console.log(response)
+alert("Check wallet for request")
 
 
   }

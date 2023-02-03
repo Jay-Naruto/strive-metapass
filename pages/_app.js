@@ -3,7 +3,7 @@ import { WagmiConfig, createClient, configureChains, mainnet } from 'wagmi'
 
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { publicProvider } from 'wagmi/providers/public'
-import { polygonMumbai } from 'wagmi/chains'
+import { polygonMumbai,polygon } from 'wagmi/chains'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
@@ -13,8 +13,8 @@ export default function App({ Component, pageProps }) {
   // Configure chains & providers with the Alchemy provider.
   // Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
   const { chains, provider, webSocketProvider } = configureChains(
-    [polygonMumbai],
-    [alchemyProvider({ apiKey: 'mJ2kFm5oq4VHeuy8-UgbZH-eJsQ8kisa' }), publicProvider()],
+    [polygon],
+    [alchemyProvider({ apiKey: 'BVszoSZ3rGaIVQ5z_ioAfor8BXUKP8zu' }), publicProvider()],
   )
 
   const client = createClient({

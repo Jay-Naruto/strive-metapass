@@ -18,7 +18,7 @@ export default function Home() {
       description: "In this Session, Surupam Chandra explains about the future of Stablecoins & its Realtime use cases.",
       website: "https://ur-hackathon-2.devfolio.co/",
       redirect: "https://youtu.be/OIlH0zDAosI",
-      contract: "0xFb6E9728577898C27135EE9F22D3979c457De1AB"
+      contract: "0xe6dd0653798652ca4fcc9f841aabeffa8df9134c"
     },
     {
       image: "/quill.jpeg",
@@ -31,12 +31,12 @@ export default function Home() {
 
     },
     {
-      image: "/strive.jpeg",
-      name: "Special Session with Kartik, Strive.",
+      image: "/strive-event.jpeg",
+      name: "Special Session with Sanhitha, Strive.",
       date: "Feb 9 at 7pm.",
-      description: "In this Session, Kartik will share about his Web3 Journey, Strive & more.",
+      description: "In this Session, Sanhitha will share about her Web3 Journey, Strive & more.",
       website: "https://ur-hackathon-2.devfolio.co/",
-      redirect: "https://www.youtube.com/live/YT_RvODzlpQ?feature=share",
+      redirect: "https://youtube.com/live/YT_RvODzlpQ?feature=share",
       contract: "0xad93EB45d2daa2958AF0F1CC784ED41e565B9522"
 
 

@@ -34,7 +34,7 @@ export default function Details() {
   const [wallet, setWallet] = useState()
   const location = useRouter();
   const event = location.query;
-  console.log(event.contract)
+  // console.log(event.contract)
   const { address, connector, isConnected } = useAccount()
   const { data: ensAvatar } = useEnsAvatar({ address })
   const { data: ensName } = useEnsName({ address })
@@ -69,7 +69,7 @@ export default function Details() {
 
 
     const res=await biconomy.init()
-    console.log(res)
+    // console.log(res)
 
     const web3 = new Web3(biconomy.provider);
   
@@ -88,11 +88,11 @@ let tx = contract.methods.mint(address, 1, 1, "0x12").send({
           });
 
 tx.on("transactionHash", function (hash) {
-              console.log(`Transaction hash is ${hash}`);
+              // console.log(`Transaction hash is ${hash}`);
               showInfoMessage(`Transaction sent. Waiting for confirmation ..`);
           }).once("confirmation", function (confirmationNumber, receipt) {
-              console.log(receipt);
-              console.log(receipt.transactionHash);
+              // console.log(receipt);
+              // console.log(receipt.transactionHash);
               //do something with transaction hash
           }); 
 alert("Check wallet for request")

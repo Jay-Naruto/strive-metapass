@@ -18,7 +18,7 @@ export default function Home() {
       description: "In this Session, Surupam Chandra explains about the future of Stablecoins & its Realtime use cases.",
       website: "https://ur-hackathon-2.devfolio.co/",
       redirect: "https://youtu.be/OIlH0zDAosI",
-      contract: "0x7d2008d3A593Dbf80c012d39A8Cc238d3E2fECA6"
+      contract: "0xFb6E9728577898C27135EE9F22D3979c457De1AB"
     },
     {
       image: "/quill.jpeg",

@@ -89,7 +89,9 @@ let tx = contract.methods.mint(address, 1, 1, "0x12").send({
 
 tx.on("transactionHash", function (hash) {
               // console.log(`Transaction hash is ${hash}`);
-              showInfoMessage(`Transaction sent. Waiting for confirmation ..`);
+              console.log(`Transaction sent. Waiting for confirmation ..`);
+              alert('NFT is minted!')
+
           }).once("confirmation", function (confirmationNumber, receipt) {
               // console.log(receipt);
               // console.log(receipt.transactionHash);
@@ -245,6 +247,7 @@ alert("Check wallet for request")
                 <li>
                 Do not reload this page or while transaction.
                 </li>
+               
                 </ul>
             </motion.p>
             <motion.div className={styles.descriptionBox}

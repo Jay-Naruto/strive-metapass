@@ -74,10 +74,10 @@ flex-direction: column;
      */
        /* background: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
        background-color: black;
-       border: 10px solid;
-       border-image-slice: 1;
+       border: 2px solid white;
+       /* border-image-slice: 1;
        border-width: 3px;
-     border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%);
+     border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
      border-radius: 10px 10px 10px 10px;
   
      backdrop-filter: blur(20px);
@@ -179,10 +179,10 @@ border-radius: 0px;
     line-height:25px;
     /* background-color: rgba(0, 0, 0); */
   /* background: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
-  border: 10px solid;
-    border-image-slice: 1;
+  border: 2px solid white;
+    /* border-image-slice: 1;
     border-width: 3px;
-  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%);
+  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
 
  
 }
@@ -193,10 +193,10 @@ border-radius: 0px;
     background-color: black;
     color: white;
     backdrop-filter: blur(20px);
-    border: 10px solid;
-    border-image-slice: 1;
+    border: 2px solid white;
+    /* border-image-slice: 1;
     border-width: 3px;
-  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%);
+  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
 
  
 
@@ -209,10 +209,10 @@ border-radius: 0px;
     background-color: black;
     color: white;
     backdrop-filter: blur(20px);
-    border: 10px solid;
-    border-image-slice: 1;
+    border: 2px solid white;
+    /* border-image-slice: 1;
     border-width: 3px;
-  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%);
+  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
 
 
 
@@ -226,10 +226,10 @@ border-radius: 0px;
    background-color: black;
    color: white;
     backdrop-filter: blur(20px);
-    border: 10px solid;
-    border-image-slice: 1;
+    border: 2px solid white;
+    /* border-image-slice: 1;
     border-width: 3px;
-  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%);
+  border-image-source: linear-gradient(180deg, #35B3D4 0%, #2CE25A 100%); */
 
 
 

@@ -236,6 +236,17 @@ alert("Check wallet for request")
             className={styles.openBtn} onClick={() => setOpen(true)}>
               MINT
             </motion.button>
+            <motion.p className={styles.note}>
+              Note:&nbsp;
+              <ul>
+                <li>
+                Make sure your wallet is on Polygon Mainnet.
+                </li>
+                <li>
+                Do not reload this page or while transaction.
+                </li>
+                </ul>
+            </motion.p>
             <motion.div className={styles.descriptionBox}
               initial="hidden" animate="visible" variants={{
                 hidden: {
